@@ -11,27 +11,25 @@
 <h1>Recon</h1>
 
 <div class="command">
-    <code>cp source_file destination_file</code>
-    <button onclick="copyToClipboard('cp source_file destination_file')">Copy</button>
-</div>
-
-<div class="command">
     <code>subfinder -d example.com -all -recursive |anew subdomains.txt</code>
     <button onclick="copyToClipboard('subfinder -d example.com -all -recursive |anew subdomains.txt')">Copy</button>
 </div>
 
-<div class="command-block">
-    <div class="command-content">
-        <pre><code>subfinder -d example.com -all -recursive > subdomain.txt</code></pre>
-        <button class="copy-button" data-command="subfinder -d example.com -all -recursive > subdomain.txt">
-            <i class="bx bx-copy"></i>
-        </button>
-    </div>
-    <div class="command-info">
-        <i class="bx bx-info-circle"></i> For finding subdomains
-    </div>
+<div class="command">
+    <code>assetfinder --subs-only example.com | anew subdomains.txt</code>
+    <button onclick="copyToClipboard('assetfinder --subs-only example.com | anew subdomains.txt')">Copy</button>
 </div>
 
+<h5>Filtering live hosts with httpx</h5>
+<div class="command">
+    <code>cat subdomains.txt | httpx -td -title -sc -ip -ct -server -ports 80,443,8080,8000,8888 -threads 200| anew httpx_domains.txt </code>
+    <button onclick="copyToClipboard('cat subdomains.txt | httpx -td -title -sc -ip -ct -server -ports 80,443,8080,8000,8888 -threads 200| anew httpx_domains.txt')">Copy</button>
+</div>
+
+<div class="command">
+    <code>cat httpx_domains.txt | awk '{print $1}' | anew live_subdomains.txt</code>
+    <button onclick="copyToClipboard('cat httpx_domains.txt | awk {print $1} | anew live_subdomains.txt')">Copy</button>
+</div>
 
 <script src="script.js"></script>
 </body>
