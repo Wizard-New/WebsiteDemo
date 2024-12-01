@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Command Copier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Linux Command Copier</h1>
+<p>Click the button to copy the command to your clipboard.</p>
+
+<div class="command">
+    <code>cp source_file destination_file</code>
+    <button onclick="copyToClipboard('cp source_file destination_file')">Copy</button>
+</div>
+
+<div class="command">
+    <code>cp -r source_directory/ destination_directory/</code>
+    <button onclick="copyToClipboard('cp -r source_directory/ destination_directory/')">Copy</button>
+</div>
+
+<div class="command">
+    <code>cp -i source_file destination_file</code>
+    <button onclick="copyToClipboard('cp -i source_file destination_file')">Copy</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
