@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux Command Copier</title>
+    <title>Recon Methodology</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Linux Command Copier</h1>
-<p>Click the button to copy the command to your clipboard.</p>
+<h1>Recon</h1>
 
 <div class="command">
     <code>cp source_file destination_file</code>
@@ -19,6 +18,18 @@
 <div class="command">
     <code>subfinder -d example.com -all -recursive |anew subdomains.txt</code>
     <button onclick="copyToClipboard('subfinder -d example.com -all -recursive |anew subdomains.txt')">Copy</button>
+</div>
+
+<div class="command-block">
+    <div class="command-content">
+        <pre><code>subfinder -d example.com -all -recursive > subdomain.txt</code></pre>
+        <button class="copy-button" data-command="subfinder -d example.com -all -recursive > subdomain.txt">
+            <i class="bx bx-copy"></i>
+        </button>
+    </div>
+    <div class="command-info">
+        <i class="bx bx-info-circle"></i> For finding subdomains
+    </div>
 </div>
 
 
